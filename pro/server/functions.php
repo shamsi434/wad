@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 require "db_connection.php";
 
 function getCats(){
@@ -25,12 +25,9 @@ function getBrands(){
         echo  "<li> <a class='nav-link'  href='#;>$title</a> </li>";
     }
 }
-
-
-=======
 require_once "db_connection.php";
 
-function getCats(){
+/*function getCats(){
     global $con;
     $getCatsQuery = "select * from categories";
     $getCatsResult = mysqli_query($con,$getCatsQuery);
@@ -49,5 +46,5 @@ function getBrands(){
         $brand_title = $row['brand_title'];
         echo "<li><a class='nav-link'  href='#'>$brand_title</a></li>";
     }
-}
->>>>>>> origin/master
+}*/
+

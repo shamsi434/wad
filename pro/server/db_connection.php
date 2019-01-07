@@ -1,4 +1,3 @@
-<?php
 <<<<<<< HEAD
 $con = mysqli_connect("localhost", "root", "", "techboxdb");
 if(!$con){
