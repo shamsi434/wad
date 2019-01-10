@@ -8,7 +8,7 @@
 }
 
 .sc-color
- {
+{
     color: var(--color-custom) !important;
 }
 
@@ -239,5 +239,9 @@ a.article:hover {
 }
 
 input[name='c_name']:invalid {
-    background-color: red;
+    background-color: blue;
+}
+
+input[name='c_email']:invalid {
+    background-color: blue;
 }

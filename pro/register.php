@@ -107,6 +107,7 @@ require "server/functions.php";
                         </div>
                         <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Enter your name"
                                required pattern="abc">
+                        required pattern="0?[1-9]|[1-2][0-9]|3[0-1]">
                     </div>
                 </div>
                 <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
@@ -118,6 +119,8 @@ require "server/functions.php";
                             <div class="input-group-text"><i class="fas fa-at"></i></div>
                         </div>
                         <input type="text" class="form-control" id="c_email" name="c_email" placeholder="Enter your email" >
+                        <input type="text" class="form-control" id="c_email" name="c_email" placeholder="Enter your email"
+                               required pattern="19[5-9][0-9]|200[0-1]">
                     </div>
                 </div>
             </div>

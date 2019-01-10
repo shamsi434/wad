@@ -41,7 +41,7 @@ require "../Connections/Functions.php"
                     <input type="text" class="form-control" id="brand_title" name="brand_title" placeholder="Enter Brand Title" >
                 </div>
             </div>
-            <!--            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
+<!--            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_cat" class="float-md-right"><span class="d-sm-none d-md-inline"> Product </span> Category:</label>
             </div>
             <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4 mt-3 mt-lg-0">
@@ -52,8 +52,8 @@ require "../Connections/Functions.php"
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
                         <?php
-            /*                        getCatsAdmin();
-                                    */?>
+/*                        getCatsAdmin();
+                        */?>
                     </select>
                 </div>
             </div>
@@ -70,8 +70,8 @@ require "../Connections/Functions.php"
                     <select class="form-control" id="pro_brand" name="pro_brand">
                         <option>Select Brand</option>
                         <?php
-            /*                        getBrandsAdmin();
-                                    */?>
+/*                        getBrandsAdmin();
+                        */?>
                     </select>
                 </div>
             </div>
@@ -124,12 +124,12 @@ require "../Connections/Functions.php"
                 </div>
             </div>
         </div>-->
-            <div class="row my-3">
-                <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-                <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
-                    <button name="insert_brand" type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
-                </div>
+        <div class="row my-3">
+            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+                <button name="insert_brand" type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
             </div>
+        </div>
     </form>
 </div>
 </body>

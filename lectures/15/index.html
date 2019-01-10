@@ -11,8 +11,7 @@
 <div>
     <div class="AccountDetails">
         <div class="sav-acct-info">
-            <div class="acct-head">Account Title :</div>
-<!--            <div clsss="acct-head">Shams uz Zaman</div>-->
+            <div class="acct-head">Account Title:</div>
             <div class="acct-desc">
                 <span id="title"></span>
             </div>
@@ -25,14 +24,12 @@
         </div>
         <div class="sav-acct-info acct-lft">
             <div class="acct-head">Account Currency:</div>
-<!--            <div clsss="acct-head">PKRS</div>-->
             <div class="acct-desc">
                 <span id="currency"></span>
             </div>
         </div>
         <div class="sav-acct-info">
             <div class="acct-head">IBAN:</div>
-<!--            <div clsss="acct-head">PKN434729</div>-->
             <div class="acct-desc">
                 <span id="IBAN"></span>
             </div>
@@ -43,14 +40,14 @@
 <div class="sav-acct-info acct-lft">
     <div class="acct-head">Deposit</div>
     <div class="acct-desc">
-        <input id="deposit" placeholder="Deposit Amount" onkeyup="savingsAccount.deposit.call(this, event, this.value)">
+        <input id="deposit" onkeyup="InputDeposit(event)" placeholder="Deposit Amount">
         <p id="deposit-msg"></p>
     </div>
 </div>
 <div class="sav-acct-info">
     <div class="acct-head">Withdraw</div>
     <div class="acct-desc">
-        <input id="withdraw" placeholder="Withdraw Amount" onkeyup="savingsAccount.withdraw.call(this, event, this.value)">
+        <input id="withdraw" onkeyup="InputWithDraw(event)" placeholder="Withdraw Amount">
         <p id="withdraw-msg"></p>
     </div>
 </div>

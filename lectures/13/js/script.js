@@ -28,48 +28,67 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
-
-    if(currentQuestion<2)
+    if(currentQuestion<=3)
     {
-        var x =document.querySelector("input[type=radio]:checked");
-        if(x == null)
+        var x=document.querySelector("input[type=radio]:checked");
+        if(x==null)
         {
-            var q = document.getElementById("quiz-message");
-            q.style.display = 'center';
-            q.style.display = 'green';
+            var mess=document.getElementById("quiz-message");
+            mess.style.display="inline";
+            mess.innerText='please select an answer';
+            var ChoiceListid=document.getElementById("choice-list");
+            ChoiceListid.innerHTML='';
         }
-        else
-        {
-            if(x.value == questions[currentQuestion].correctAnswer)
+        else if (currentQuestion<3){
+            if(x.id==questions[currentQuestion].correctAnswer)
             {
                 correctAnswers++;
             }
-            var y = document.getElementById("choices-list");
-            y.innerHTML = '';
+            var ChoiceListid=document.getElementById("choice-list");
+            ChoiceListid.innerHTML='';
             currentQuestion++;
         }
-        displayCurrentQuestion();
+        if(currentQuestion!=3) {
+            displayCurrentQuestion();
+        }
+        else
+        {
+            displayScore();
+            var mess=document.getElementById("quiz-message");
+            mess.style.display="none";
+            currentQuestion++;
+            var Next = document.getElementById("next-btn");
+            Next.innerText='Reset';
+        }
+
     }
-    else
-    {
-        displayScore();
+    else {
+        resetQuiz();
+
     }
+
 }
 
 function displayCurrentQuestion() {
-    var x = document.getElementById("question");
-    x.innerHTML = '<p>' + questions[currentQuestion] + '</p>';
-    var y = document.getElementById("choices-list");
-
-    for(var i=0; i<4; i++)
+    /*Write your code here */
+    var questionid=document.getElementById("question");
+    questionid.innerHTML='<p>'+questions[currentQuestion].question+'<p>';
+    var ChoiceListid=document.getElementById("choice-list");
+    for(var x=0;x<questions[currentQuestion].choices.length;x++)
     {
-        y.innerHTML = '<li>' + '<input type = "radio" name="checked" value =" '+i+' ">'+ questions[currentQuestion].choices[i] + '</li>' ;
+        ChoiceListid.innerHTML += '<li>'+'<input id="'+x+'" type="radio" name="ch">'+ questions[currentQuestion].choices[x] +'</li>';
     }
+
+
+}
 
 function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
     hideScore();
+    var Next = document.getElementById("next-btn");
+    Next.innerText='Reset';
+    displayCurrentQuestion();
 }
 function displayScore() {
     document.getElementById("result").innerHTML = "you scored: " + correctAnswers + " out of: " + questions.length;
